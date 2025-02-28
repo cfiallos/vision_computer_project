@@ -6,26 +6,30 @@ PySimpleGUI.
 
 ## Estructura del Proyecto
 ```
-vision_app/
-├── main.py               # Código principal para correr la app
-├── filters
-|───gaussianBlur.py            # Funciones de filtros de imagen
-├── detectors.py          # Funciones para detección de puntos de interés
-├── interface.py          # Código para la interfaz gráfica (GUI)
-├── resources/            # Carpeta para videos o imágenes de prueba
+vision_computer_project/
+├── imagenes_prueba/            # Carpeta para videos o imágenes de prueba
+     ├── circles_detect.py           #Funciones para la detección de circulos
+     ├── color_range.py           # Funciones para definir rangos de colores
+     ├── interface.py          # Código para la interfaz gráfica (GUI)
+     ├── segmentation.py          # Funciones para la segmentación de imagen
+├── principal.py               # Código principal para correr la app
 ├── requirements.txt      # Dependencias del proyecto
 ├── .gitignore            # Archivos y carpetas a ignorar por Git
 └── README.md             # Instrucciones y objetivos del proyecto
 ```
 
 ## Instalación
-1. Clonar el repositorio.
-2. Crear y activar un entorno virtual:
+1. Ingresar a la carpeta correspondiente:
+```bash
+cd ./vision_computer_project/  # En Windows: .\vision_computer_project\
+```
+2. Clonar el repositorio.
+3. Crear y activar un entorno virtual:
 ```bash
 python -m venv venv
 source venv/bin/activate  # En Windows: venv\Scripts\activate
 ```
-3. Instalar dependencias:
+4. Instalar dependencias:
 ```bash
 pip install -r requirements.txt
 ```
@@ -33,18 +37,19 @@ pip install -r requirements.txt
 ## Uso
 Ejecutar la aplicación con:
 ```bash
-python main.py
+python principal.py
 ```
 
 Selecciona los filtros que quieres aplicar y observa los resultados en tiempo real.
 
 ## Extensiones
-- Agrega tus propios filtros en `filters.py`.
-- Implementa detección de puntos de interés en `detectors.py`.
+- Agrega tus propias segmentaciones en `segmentation.py`.
+- Implementa detección de círuclos en `cricledetect.py`.
+- Implementa rangos de colores en `colorange.py`.
 - Personaliza la interfaz en `interface.py`.
 
 
-## Aquí va a ir el informe
+## Aquí va a ir el informe [Hacer el informe del Proyecto 3 Parcial]
 
 # Informe del Proyecto de Visión por Computadora
 
