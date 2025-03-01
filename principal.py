@@ -1,6 +1,4 @@
 import cv2
-import matplotlib.pyplot as plt
-import numpy as np
 import PySimpleGUI as sg
 from modulos_proyecto_3P.segmentations import SegmentationOpenCV
 from modulos_proyecto_3P.color_range import ColorRange
