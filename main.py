@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 from modulos.filters import FilterOpenCV
 from modulos.detectors import DetectorOpenCV
-from modulos.segmentations import Segmentation
+from vision_computer_project.modulos.segmentation import Segmentation
 from modulos.interface import create_window
 import PySimpleGUI as sg
 

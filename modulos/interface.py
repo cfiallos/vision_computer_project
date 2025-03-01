@@ -27,6 +27,9 @@ def create_window():
         [sg.Text('Selecciona el espacio de color:')],
         [sg.Combo(['HSV', 'LAB'], default_value='HSV', key='COLOR_SPACE')],
 
+        [sg.Text('Modelo CNN')],
+        [sg.Checkbox('CNN Model', key='CNNMODEL')],
+
         [sg.Button('Iniciar'), sg.Button('Detener'), sg.Button('Salir')]
 
     ]

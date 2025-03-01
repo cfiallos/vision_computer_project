@@ -292,7 +292,7 @@ print("Modelo cargado correctamente")
 ```
 ### Explicación de la Aplicación de la Función ReLU en este Ejemplo
 
-La función ReLU en este código se utiliza para introducir no linealidades en la red neuronal convolucional, permitiendo que la red aprenda y represente relaciones complejas en los datos. Aquí te explico brevemente cómo funciona en cada capa:
+La función ReLU en este código se utiliza para introducir no linealidades en la red neuronal convolucional, permitiendo que la red aprenda y represente relaciones complejas en los datos, esto ocurre de la siguiente manera:
 
 - **`Capas convolucionales:`** Se aplican dos capas convolucionales (conv1 y conv2) para extraer características de la imagen y después de cada capa convolucional se puede aplicar la función de activación ReLU (relu) para lograr introducir no linealidades y la capa de pooling (pool) para reducir la dimensión de las características.
 
