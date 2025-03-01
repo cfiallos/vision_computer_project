@@ -18,7 +18,8 @@ vision_computer_project/
 ├── principal.py               # Código principal para correr la app
 ├── requirements.txt      # Dependencias del proyecto
 ├── .gitignore            # Archivos y carpetas a ignorar por Git
-└── README.md             # Instrucciones y objetivos del proyecto
+├── README.md             # Instrucciones y objetivos del proyecto en formato Markdown
+└── README.pdf             # Instrucciones y objetivos del proyecto en formato PDF
 ```
 
 ## Instalación
