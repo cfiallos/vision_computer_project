@@ -4,7 +4,6 @@ from modulos_proyecto_3P.circles_detect import CircleDetector
 from modulos_proyecto_3P.color_range import ColorRange
 
 
-
 class SegmentationOpenCV:
     def __init__(self):
         self.__frame = None
@@ -41,9 +40,6 @@ class SegmentationOpenCV:
         return self.__detect_border
 
     def draw_detected_circles(self):
-        """
-        Aplica la detección de círculos en la imagen segmentada.
-        """
         if self.__mask is None:
             print("Error: No se puede detectar círculos sin una segmentación previa.")
             return self.__frame

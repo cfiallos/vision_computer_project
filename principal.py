@@ -5,6 +5,7 @@ import PySimpleGUI as sg
 from modulos_proyecto_3P.segmentations import SegmentationOpenCV
 from modulos_proyecto_3P.color_range import ColorRange
 from modulos_proyecto_3P.interface import create_interface
+from modulos_proyecto_3P.model_detect import ModelDetector
 
 
 class VideoProcessor:
@@ -13,6 +14,8 @@ class VideoProcessor:
         self.__cap = None
         self.__segmentation = SegmentationOpenCV()
         self.__colorange = ColorRange()
+        self.model_detector = ModelDetector("cnn_model.pth")
+        
         while True:
             event, values = self.__window.read(timeout=20)
             
@@ -67,6 +70,10 @@ class VideoProcessor:
                 if values.get('DRAWCIRC', False):
                     frame = self.__segmentation.draw_detected_circles()
 
+                if values['CNNMODEL']:
+                    resultado_prediccion = self.model_detector.predict(frame)
+                    cv2.putText(frame, f"Prediccion: {resultado_prediccion}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 2)
+                
                 cv2.imshow('Video', frame)
 
 
